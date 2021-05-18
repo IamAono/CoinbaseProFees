@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Enter in your transactions for a month in order.</h1>
+    <form action="#" th:action="@{/}" th:object="${transaction}" method="post">
+    	<p><input type="radio" id = "maker" name = "makerTaker" value = "maker"/>
+    	<label for = "maker">Maker</label></p>
+    	<p><input type="radio" id = "taker" name = "makerTaker" value = "taker"/>
+    	<label for = "maker">Taker</label></p>
+    	<p><input type="radio" id = "buy" name = "buySell" value = "buy"/>
+    	<label for = "maker">Buy</label></p>
+    	<p><input type="radio" id = "sell" name = "buySell" value = "sell"/>
+    	<label for = "maker">Sell</label></p>
+    	<p>Amount: <input type="text" th:field="*{amount}" /></p>
+    	<input type="button" onclick="addTransaction" value="Add transaction">
+    </form>
+</body>
+</html>
