@@ -7,16 +7,19 @@
 <body>
 	<h1>Enter in your transactions for a month in order.</h1>
     <form action="#" th:action="@{/}" th:object="${transaction}" method="post">
-    	<p><input type="radio" id = "maker" name = "makerTaker" value = "maker"/>
+    	<p><input type="radio" id = "maker" name = "makerTaker" value = "maker" th:field="*{makerTaker}"/>
     	<label for = "maker">Maker</label></p>
-    	<p><input type="radio" id = "taker" name = "makerTaker" value = "taker"/>
+    	<p><input type="radio" id = "taker" name = "makerTaker" value = "taker" th:field="*{makerTaker}"/>
     	<label for = "maker">Taker</label></p>
-    	<p><input type="radio" id = "buy" name = "buySell" value = "buy"/>
+    	<p><input type="radio" id = "buy" name = "buySell" value = "buy" th:field="*{buySell}"/>
     	<label for = "maker">Buy</label></p>
-    	<p><input type="radio" id = "sell" name = "buySell" value = "sell"/>
+    	<p><input type="radio" id = "sell" name = "buySell" value = "sell" th:field="*{buySell}"/>
     	<label for = "maker">Sell</label></p>
-    	<p>Amount: <input type="text" th:field="*{amount}" /></p>
-    	<input type="button" onclick="addTransaction" value="Add transaction">
+    	<p>Amount: <input type="text" th:field="*{amount}"/></p>
+    	<p th:text="*{amount}" />
+    	<p><input type="submit" value="Submit" />
+    	<input type="button" th:onclick="${feeCalculator.addTransaction(transaction)}" value="Add transaction">
+    	<input type="button" onclick="feeCalculator.calculate" value="Done">
     </form>
 </body>
 </html>

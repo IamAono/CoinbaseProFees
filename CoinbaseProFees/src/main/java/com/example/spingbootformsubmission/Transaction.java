@@ -6,11 +6,11 @@ public class Transaction {
 	private String buySell;
 	private double amount;
 	
-	public String getMT() {
+	public String getMakerTaker() {
 		return makerTaker;
 	}
 	
-	public String getBS() {
+	public String getBuySell() {
 		return buySell;
 	}
 	
@@ -18,15 +18,16 @@ public class Transaction {
 		return amount;
 	}
 	
-	public void setMT(String mt) {
+	public void setMakerTaker(String mt) {
 		makerTaker = mt;
 	}
 	
-	public void setBS(String bs) {
+	public void setBuySell(String bs) {
 		buySell = bs;
 	}
 	
 	public void setAmount(double a) {
 		amount = a;
 	}
+	
 }

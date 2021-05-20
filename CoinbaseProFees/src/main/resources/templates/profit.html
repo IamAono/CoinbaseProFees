@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Profits in the past month</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="'Profit: ' + ${feeCalculator.profit}" />
+    <p th:text="'Fees paid: ' + ${feeCalculator.fees}" />
+    <a href="/">Go back</a>
+</body>
+</html>

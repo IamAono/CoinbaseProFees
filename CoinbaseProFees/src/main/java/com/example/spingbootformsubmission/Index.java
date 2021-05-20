@@ -3,6 +3,8 @@ package com.example.spingbootformsubmission;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class Index {
@@ -14,6 +16,12 @@ public class Index {
 		return "index";
 	}
 	
+	@PostMapping("/")
+	public String indexSubmit(@ModelAttribute FeeCalculator fc, @ModelAttribute Transaction t, Model model) {
+		model.addAttribute("feeCalculator", fc);
+		model.addAttribute("transaction", t);
+		return "profit";
+	}
 	
 
 }
