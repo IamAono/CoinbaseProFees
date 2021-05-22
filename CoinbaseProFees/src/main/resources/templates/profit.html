@@ -5,8 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="'Profit: ' + ${feeCalculator.profit}" />
+	<p th:text="'Amount: ' + ${transaction.amount}" />
+	<p th:text="'Profit: ' + ${feeCalculator.profit}" />
     <p th:text="'Fees paid: ' + ${feeCalculator.fees}" />
-    <a href="/">Go back</a>
+    <a href="/">Add another transaction</a>
 </body>
 </html>
