@@ -30,28 +30,130 @@ public class FeeCalculator {
 			fees += t.getAmount() * 0.005;
 		}
 		else if(tier == 1) {
-			
+			if(t.getBuySell().equals("buy")) {
+				profit -= t.getAmount();
+			}
+			else {
+				profit += t.getAmount();
+			}
+			profit -= (t.getAmount() * 0.0035);
+			fees += t.getAmount() * 0.0035;
 		}
 		else if(tier == 2) {
-			
+			if(t.getBuySell().equals("buy")) {
+				profit -= t.getAmount();
+			}
+			else {
+				profit += t.getAmount();
+			}
+			if(t.getMakerTaker().equals("taker")) {
+				profit -= (t.getAmount() * 0.0025);
+				fees += t.getAmount() * 0.0025;
+			}
+			else {
+				profit -= (t.getAmount() * 0.0015);
+				fees += t.getAmount() * 0.0015;
+			}
 		}
 		else if(tier == 3) {
-			
+			if(t.getBuySell().equals("buy")) {
+				profit -= t.getAmount();
+			}
+			else {
+				profit += t.getAmount();
+			}
+			if(t.getMakerTaker().equals("taker")) {
+				profit -= (t.getAmount() * 0.002);
+				fees += t.getAmount() * 0.002;
+			}
+			else {
+				profit -= (t.getAmount() * 0.001);
+				fees += t.getAmount() * 0.001;
+			}
 		}
 		else if(tier == 4) {
-					
+			if(t.getBuySell().equals("buy")) {
+				profit -= t.getAmount();
+			}
+			else {
+				profit += t.getAmount();
+			}
+			if(t.getMakerTaker().equals("taker")) {
+				profit -= (t.getAmount() * 0.0018);
+				fees += t.getAmount() * 0.0018;
+			}
+			else {
+				profit -= (t.getAmount() * 0.0008);
+				fees += t.getAmount() * 0.0008;
+			}
 		}
 		else if(tier == 5) {
-			
+			if(t.getBuySell().equals("buy")) {
+				profit -= t.getAmount();
+			}
+			else {
+				profit += t.getAmount();
+			}
+			if(t.getMakerTaker().equals("taker")) {
+				profit -= (t.getAmount() * 0.0015);
+				fees += t.getAmount() * 0.0015;
+			}
+			else {
+				profit -= (t.getAmount() * 0.0005);
+				fees += t.getAmount() * 0.0005;
+			}
 		}
 		else if(tier == 6) {
-			
+			if(t.getBuySell().equals("buy")) {
+				profit -= t.getAmount();
+			}
+			else {
+				profit += t.getAmount();
+			}
+			if(t.getMakerTaker().equals("taker")) {
+				profit -= (t.getAmount() * 0.001);
+				fees += t.getAmount() * 0.001;
+			}
+			else {
+				profit -= (t.getAmount() * 0.0002);
+				fees += t.getAmount() * 0.0002;
+			}
 		}
 		else if(tier == 7) {
-			
+			if(t.getBuySell().equals("buy")) {
+				profit -= t.getAmount();
+			}
+			else {
+				profit += t.getAmount();
+			}
+			if(t.getMakerTaker().equals("taker")) {
+				profit -= (t.getAmount() * 0.0006);
+				fees += t.getAmount() * 0.0006;
+			}
+		}
+		else if(tier == 8) {
+			if(t.getBuySell().equals("buy")) {
+				profit -= t.getAmount();
+			}
+			else {
+				profit += t.getAmount();
+			}
+			if(t.getMakerTaker().equals("taker")) {
+				profit -= (t.getAmount() * 0.0005);
+				fees += t.getAmount() * 0.0005;
+			}
 		}
 		else {
-			
+			if(t.getBuySell().equals("buy")) {
+				profit -= t.getAmount();
+			}
+			else {
+				profit += t.getAmount();
+			}
+			if(t.getMakerTaker().equals("taker")) {
+				profit -= (t.getAmount() * 0.0004);
+				fees += t.getAmount() * 0.0004;
+			}
 		}
 	}
 	
