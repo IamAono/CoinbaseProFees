@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head> 
-    <title>Getting Started: Handling Form Submission</title>
+    <title>Coinbase Pro Profits</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 	<h1>Enter in your transactions for a month in order.</h1>
-    <form action="#" th:action="@{/}" th:object = "${transaction}" method="post">
+    <form action="#" th:action="@{/profit}" th:object = "${transaction}">
     	<p><input type="radio" id = "maker" name = "makerTaker" value = "maker" th:field="*{makerTaker}"/>
     	<label for = "maker">Maker</label></p>
     	<p><input type="radio" id = "taker" name = "makerTaker" value = "taker" th:field="*{makerTaker}"/>
@@ -16,7 +16,7 @@
     	<p><input type="radio" id = "sell" name = "buySell" value = "sell" th:field="*{buySell}"/>
     	<label for = "maker">Sell</label></p>
     	<p>Amount: <input type="text" th:field="*{amount}"/></p>
-    	<p><input type="submit" value="Add transaction"/></p>
+    	<p><input type="submit" value="Add transaction" formmethod="post"/></p>
     </form>
 </body>
 </html>

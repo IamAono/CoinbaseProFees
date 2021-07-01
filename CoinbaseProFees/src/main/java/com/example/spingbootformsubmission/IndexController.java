@@ -18,7 +18,17 @@ public class IndexController {
 		return "index";
 	}
 	
-	@PostMapping("/")
+	@GetMapping("/profit")
+	public String profitForm(Model model) {
+		return "profit";
+	}
+	
+	@GetMapping("/clear")
+	public String clearForm(Model model) {
+		return "clear";
+	}
+	
+	@PostMapping("/profit")
 	public String indexSubmit(@ModelAttribute FeeCalculator fc, @ModelAttribute Transaction t, Model model) {
 		model.addAttribute("feeCalculator", fc);
 		model.addAttribute("transaction", t);
@@ -26,6 +36,12 @@ public class IndexController {
 		profit = fc.getProfit();
 		fees = fc.getFees();
 		return "profit";
+	}
+	
+	@PostMapping("/clear")
+	public void clear() {
+		profit = 0;
+		fees = 0;
 	}
 	
 

@@ -5,8 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<p th:text="'Profit: ' + ${feeCalculator.profit}" />
-    <p th:text="'Fees paid: ' + ${feeCalculator.fees}" />
-    <a href="/">Add another transaction</a>
+	<form action="#" th:action="@{/clear}">
+    	<p th:text="'Profit: ' + ${feeCalculator.profit}" />
+    	<p th:text="'Fees paid: ' + ${feeCalculator.fees}" />
+    	<a href="/">Add another transaction</a>
+    	<p><input type="submit" value="Clear transactions" formmethod="post"/></p>
+    </form>
 </body>
 </html>
